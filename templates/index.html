@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>EV Market Dashboard & Story</title>
+  <meta name="description" content="Interactive EV Market Performance Dashboard and Insights">
+  <meta name="keywords" content="EV, Electric Vehicles, Data Analytics, Tableau, Dashboard">
+
+  <!-- Favicons -->
+  <link href="static/img/favicon.png" rel="icon">
+  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="static/css/main.css" rel="stylesheet">
+
+  <!-- Custom CSS for Tableau Embeds -->
+  <style>
+    .tableau-responsive {
+      width: 100%;
+      overflow-x: auto;
+      background: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <h1 class="sitename">EV Insights</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#insights">Insights</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#story">Story</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="#dashboard">Explore Dashboard</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main class="main">
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero section">
+      <div class="container">
+        <div class="hero-wrapper">
+          <div class="hero-main-content text-center">
+            <h1 class="hero-title" data-aos="zoom-in" data-aos-delay="200">
+              Navigating the Future of<br>
+              <span class="typed" data-typed-items="Electric Vehicles, Market Trends, Consumer Adoption"></span>
+            </h1>
+
+            <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
+              Dive deep into the data driving the electric vehicle revolution. Explore interactive dashboards, uncover market stories, and analyze performance metrics across the globe.
+            </p>
+
+            <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
+              <a href="#dashboard" class="action-btn primary">
+                <span>View Dashboard</span>
+                <i class="bi bi-bar-chart-line"></i>
+              </a>
+              <a href="#story" class="action-btn secondary">
+                <i class="bi bi-journal-text"></i>
+                <span>Explore the Story</span>
+              </a>
+            </div>
+
+            <div class="hero-image-showcase" data-aos="fade-up" data-aos-delay="500">
+              <div class="image-wrapper">
+                <img src="static/img/about/about-18.webp" class="img-fluid" alt="EV Market Overview">
+                <div class="floating-card card-1" data-aos="fade-right" data-aos-delay="600">
+                  <div class="card-content">
+                    <div class="card-icon">
+                      <i class="bi bi-ev-station"></i>
+                    </div>
+                    <div class="card-info">
+                      <h4><span data-purecounter-start="0" data-purecounter-end="89" class="purecounter"></span>%</h4>
+                      <p>Market Growth</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="floating-card card-2" data-aos="fade-left" data-aos-delay="700">
+                  <div class="card-content">
+                    <div class="card-icon">
+                      <i class="bi bi-car-front"></i>
+                    </div>
+                    <div class="card-info">
+                      <h4><span data-purecounter-start="0" data-purecounter-end="500" class="purecounter"></span>K+</h4>
+                      <p>EVs on Road</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Hero Section -->
+
+    <!-- ======= Insights Section ======= -->
+    <section id="insights" class="about section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Data Insights Overview</h2>
+        <p>Discover the narratives and metrics shaping the electric vehicle industry.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-center justify-content-between g-lg-5">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+            <div class="image-wrapper">
+              <img src="static/img/about/about-portrait-7.webp" class="img-fluid rounded" alt="Data Insights">
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="content">
+              <h2 class="mb-4">Understanding the EV Landscape</h2>
+              
+              <h5 class="mb-2 text-primary">The Dashboard: Real-Time Market Performance</h5>
+              <p>Our comprehensive dashboard provides a macro-level view of the EV market. It tracks critical metrics such as total sales volume, market share by manufacturer, regional adoption rates, and charging infrastructure density. Users can filter data by year, vehicle type, and geography to identify emerging trends and benchmark performance against competitors.</p>
+
+              <h5 class="mb-2 text-primary mt-4">The Story: A Narrative of Adoption</h5>
+              <p>Beyond raw numbers, the Story section guides you through the chronological evolution of the EV market. It presents a curated narrative highlighting pivotal moments, shifts in consumer behavior, and technological advancements. By combining visualizations with context, the Story reveals how policy changes and infrastructure investments have directly influenced adoption curves over the last decade.</p>
+
+              <div class="mt-5" data-aos="fade-up" data-aos-delay="600">
+                <a href="#dashboard" class="btn btn-primary me-3">Go to Dashboard</a>
+                <a href="#story" class="btn btn-outline-primary">Read the Story</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Insights Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Analytics Features</h2>
+        <p>Empowering your decisions with robust data visualization and interactive tools.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="features-grid">
+          <div class="feature-item" data-aos="flip-up" data-aos-delay="250">
+            <div class="feature-number">01</div>
+            <div class="feature-content">
+              <div class="feature-icon">
+                <i class="bi bi-graph-up"></i>
+              </div>
+              <h4>Real-Time Market Data</h4>
+              <p>Track live adoption rates, sales figures, and market share shifts across different regions and vehicle segments as they happen.</p>
+              <div class="feature-tags">
+                <span class="tag">Live Data</span>
+                <span class="tag">Tracking</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-item" data-aos="flip-up" data-aos-delay="300">
+            <div class="feature-number">02</div>
+            <div class="feature-content">
+              <div class="feature-icon">
+                <i class="bi bi-pie-chart"></i>
+              </div>
+              <h4>Competitive Benchmarking</h4>
+              <p>Compare manufacturer performance, pricing strategies, and consumer sentiment to identify your competitive edge.</p>
+              <div class="feature-tags">
+                <span class="tag">Competitors</span>
+                <span class="tag">Metrics</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-item" data-aos="flip-up" data-aos-delay="350">
+            <div class="feature-number">03</div>
+            <div class="feature-content">
+              <div class="feature-icon">
+                <i class="bi bi-map"></i>
+              </div>
+              <h4>Infrastructure Mapping</h4>
+              <p>Visualize the correlation between charging station density and EV adoption rates using interactive geographical maps.</p>
+              <div class="feature-tags">
+                <span class="tag">Geo-Spatial</span>
+                <span class="tag">Mapping</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-item" data-aos="flip-up" data-aos-delay="400">
+            <div class="feature-number">04</div>
+            <div class="feature-content">
+              <div class="feature-icon">
+                <i class="bi bi-journal-richtext"></i>
+              </div>
+              <h4>Interactive Storytelling</h4>
+              <p>Navigate through guided data narratives that explain complex market shifts and policy impacts in an easy-to-understand format.</p>
+              <div class="feature-tags">
+                <span class="tag">Narrative</span>
+                <span class="tag">Guided</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-item" data-aos="flip-up" data-aos-delay="450">
+            <div class="feature-number">05</div>
+            <div class="feature-content">
+              <div class="feature-icon">
+                <i class="bi bi-funnel"></i>
+              </div>
+              <h4>Deep Filtering Capabilities</h4>
+              <p>Slice and dice data by vehicle type (BEV, PHEV), region, year, and consumer demographics to uncover micro-trends.</p>
+              <div class="feature-tags">
+                <span class="tag">Filters</span>
+                <span class="tag">Segmentation</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-item" data-aos="flip-up" data-aos-delay="500">
+            <div class="feature-number">06</div>
+            <div class="feature-content">
+              <div class="feature-icon">
+                <i class="bi bi-share"></i>
+              </div>
+              <h4>Seamless Integration</h4>
+              <p>Embedded directly from Tableau, ensuring high-performance rendering, up-to-date data, and seamless sharing capabilities.</p>
+              <div class="feature-tags">
+                <span class="tag">Tableau</span>
+                <span class="tag">Shareable</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Features Section -->
+
+    <!-- ======= Dashboard Section ======= -->
+    <section id="dashboard" class="dashboard section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>EV Market Dashboard</h2>
+        <p>Interactive performance metrics and market share analysis.</p>
+      </div>
+      
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <!-- Tableau Dashboard Embed -->
+        <div class="tableau-responsive">
+            <div class='tableauPlaceholder' id='viz1793514272706' style='position: relative'><noscript><a href='#'><img alt='EV MARKET PERFORMANCE &amp; INSIGHTS ' src='https://public.tableau.com/static/images/EV/EV_Market_Performance_Dashboard2/Dashboard2/1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='EV_Market_Performance_Dashboard2/Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https://public.tableau.com/static/images/EV/EV_Market_Performance_Dashboard2/Dashboard2/1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                
+            <script type='text/javascript'>                    
+                var divElement = document.getElementById('viz1793514272706');                    
+                var vizElement = divElement.getElementsByTagName('object')[0];                    
+                if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height='927px';} 
+                else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height='927px';} 
+                else { vizElement.style.width='100%';vizElement.style.height='1227px';}                     
+                var scriptElement = document.createElement('script');                    
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+            </script>
+        </div>
+      </div>
+    </section><!-- End Dashboard Section -->
+
+    <!-- ======= Story Section ======= -->
+    <section id="story" class="story section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>The EV Market Story</h2>
+        <p>A guided narrative through the evolution of electric vehicles.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <!-- Tableau Story Embed -->
+        <div class="tableau-responsive">
+            <div class='tableauPlaceholder' id='viz1793514452754' style='position: relative'><noscript><a href='#'><img alt='Story 2 ' src='https://public.tableau.com/static/images/EV/EV_Market_Performance_story2/Story2/1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='EV_Market_Performance_story2/Story2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https://public.tableau.com/static/images/EV/EV_Market_Performance_story2/Story2/1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /><param name='filter' value='publish=yes' /></object></div>                
+            <script type='text/javascript'>                    
+                var divElement = document.getElementById('viz1793514452754');                    
+                var vizElement = divElement.getElementsByTagName('object')[0];                    
+                vizElement.style.width='100%';vizElement.style.height='927px';                    
+                var scriptElement = document.createElement('script');                    
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+            </script>
+        </div>
+      </div>
+    </section><!-- End Story Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Get in Touch</h2>
+        <p>Have questions about the data or need custom analysis? Reach out.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="contact-form-wrapper" style="background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+              <form action="forms/contact.php" method="post" class="php-email-form">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="contactName" class="form-label">Full Name</label>
+                    <input type="text" name="name" class="form-control" id="contactName" placeholder="John Doe" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="contactEmail" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" name="email" id="contactEmail" placeholder="john@example.com" required>
+                  </div>
+                  <div class="col-12">
+                    <label for="contactSubject" class="form-label">Subject</label>
+                    <input type="text" class="form-control" name="subject" id="contactSubject" placeholder="Data Inquiry" required>
+                  </div>
+                  <div class="col-12">
+                    <label for="contactMessage" class="form-label">Your Message</label>
+                    <textarea class="form-control" name="message" id="contactMessage" rows="5" placeholder="How can we help you?" required></textarea>
+                  </div>
+                  <div class="col-12 text-center mt-4">
+                    <button type="submit" class="btn btn-primary px-5 py-2">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer light-background">
+    <div class="copyright text-center py-4">
+      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+        <div>
+          © Copyright <strong><span>EV Insights</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed with BootstrapMade
+        </div>
+        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/aos/aos.js"></script>
+  <script src="static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="static/vendor/typed.js/typed.umd.js"></script>
+  <script src="static/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="static/js/main.js"></script>
+
+</body>
+</html>
