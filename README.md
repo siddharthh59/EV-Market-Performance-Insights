@@ -18,3 +18,11 @@ A full-stack Business Intelligence web application built with Python (Flask) and
 1. Clone the repository:
    ```bash
    git clone https://github.com/siddharthh59/EV-Market-Performance-Insights.git
+
+
+## 🔗 Project Links
+*   **Developer:** Siddharth Raghuwanshi
+*   **Interactive Dashboard:** [Click here to view the Tableau Dashboard](https://public.tableau.com/app/profile/siddharth.raghuwanshi6833/viz/EV_Market_Performance_Dashboard2/Dashboard2)
+*   **Data Story Narrative:** [Click here to view the Tableau Story](https://public.tableau.com/app/profile/siddharth.raghuwanshi6833/viz/EV_Market_Performance_story2/Story2)
+*   **Final Report:** [View the Final Report PDF](./Siddharth_Final_Report.pdf)
+*   **Dataset Source:** [Kaggle EV Market Dataset](https://www.kaggle.com/datasets/tharishreddy22/electric-vehicle-market-classification-dataset)
